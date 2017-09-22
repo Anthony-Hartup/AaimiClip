@@ -1,0 +1,40 @@
+### COPY FIRST BLOCK OF TEXT BELOW INTO YOUR JAVASCRIPT FILE ###
+
+$('#mainsearchform').submit(function(event) {
+	event.preventDefault();
+    var $form = $( this ),
+    	fold = $form.find( "select[name='folder']" ).val(),
+    	//alert(fold);
+    	searchterms = $form.find( "input[name='keys']" ).val(),	    	
+    	url = $form.attr( "action" );
+    	$('div.mainresults').attr('style', 'display:block');
+		$('div.mainresults').load('/aaimi_clip_search/aaimiclipin_s.php', {'folder':fold, 'keys':searchterms});
+		$('.hideresults').attr('style', 'display:block');
+});
+$('button.hideresults').click(function (e) {
+	$('.mainresults').attr('style', 'display:none');
+	$('.hideresults').attr('style', 'display:none');
+});
+
+
+
+## COPY TEXT BELOW INTO YOUR HTML FILES ###
+
+<div class="mainsearcharea">
+<h2 style="margin-top:0px;">Search with AaimiClip</h2>
+<form id="searchform" action="/aaimi_clip_search/aaimi_clip_read.php">
+    <label>Folder</label>
+    <select name="folder">
+    <option value="Subject1">Subject1</option>
+    <option value="Subject2">Subject2</option>				
+    </select>
+    <label>Keywords</label>
+    <input name="keys">
+    <br>
+    <input style="background-color:green;color:white;" name="submit" type="submit" value="Search">
+    <br>
+</form>
+<div><button class="hideresults" type="button">Hide Results</button></div>  
+<div class="mainresults">
+</div>				
+</div>

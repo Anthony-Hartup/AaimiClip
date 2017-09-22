@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>AaimiClip</title>
+<link rel="stylesheet" type="text/css" href="aaimiclip.css" media="screen">
+<link rel="icon" type="image/ico" href="tab.ico">
+</head>
+<body>
+<div class="row" style="width:100%;">
+<div class="col-4 col-m-4 panel" id="lcol" style="background:rgba(255, 255, 255, .6);">
+<h2><a href="http://yourHomePage.com">Home</a></h2>    
+    <div class="searcharea">
+    <h2>Search with AaimiClip</h2>
+    <form id="searchform" action="aaimi_clip_read.php">
+	    <label>Folder</label>
+		<select name="folder">
+	  	<option value="Subject1">Subject1</option>
+	  	<option value="Subject2">Subject2</option>			
+		</select>
+		<label>Keywords</label>
+		<input name="keys">
+		<input name="submit" type="submit" value="Submit">
+    </form>
+    </div>
+</div>
+    <div class="col-8 col-m-12 panel" style="background:rgba(255, 255, 255, .6);">
+    <div class="results">
+    </div>
+</div>
+</div>
+<br>
+<script src="aaimiclip.js"></script>
+</body>
+</html>
+

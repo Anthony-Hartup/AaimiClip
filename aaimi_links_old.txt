@@ -1,0 +1,2 @@
+test https://anthscomputercave.com/projects/aaimi/clip/aaimi_clip_tutorial.html?pagename=aaimi_clip_web test_number_one 17_09_22_09_59
+test https://anthscomputercave.com/projects/aaimi/clip/aaimi_clip_tutorial.html?pagename=aaimi_clip_features test_number_two 17_09_22_10_02
